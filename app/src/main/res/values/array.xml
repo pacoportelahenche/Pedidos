@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="array_cantidad_a_pedir">
+        <item>Nada</item>
+        <item>Medio palet</item>
+        <item>Un palet</item>
+    </string-array>
+</resources>

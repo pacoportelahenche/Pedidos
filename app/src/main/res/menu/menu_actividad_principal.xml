@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/enviar"
+        android:title="Enviar correo" />
+    <item
+        android:id="@+id/anadir"
+        android:title="Añadir yogur"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/borrarPedido"
+        android:title="Borrar pedido" />
+    <item
+        android:id="@+id/correo"
+        android:title="Cambiar dirección correo" />
+    <item
+        android:id="@+id/asunto"
+        android:title="Cambiar asunto correo" />
+    <item
+        android:id="@+id/ayuda"
+        android:title="Ayuda" />
+    <item
+        android:id="@+id/urkel"
+        android:title="Steve Urkel" />
+    <item
+        android:id="@+id/salir"
+        android:title="Salir" />
+</menu>
