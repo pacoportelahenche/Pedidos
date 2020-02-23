@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -24,13 +25,17 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
+/**
+ * Creada por Francisco Portela Henche el 10/02/2020.
+ * Esta clase es la actividad principal de la app.
+ */
 
 public class ActividadPrincipal extends AppCompatActivity {
     private TabLayout tabLayout;
     private ViewPager viewPager;
     private FragmentDanone fragmentDanone;
     private FragmentFeiraco fragmentFeiraco;
-    ViewPagerAdapter adapter;
+    private ViewPagerAdapter adapter;
     public static List<Dato> listaDatos;
     public static AdaptadorListaYogures adaptadorListaYogures;
 
@@ -59,6 +64,8 @@ public class ActividadPrincipal extends AppCompatActivity {
         adapter.addFragment(fragmentFeiraco, "Feiraco");
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        setSupportActionBar(myToolbar);
         getDatos();
     }
 

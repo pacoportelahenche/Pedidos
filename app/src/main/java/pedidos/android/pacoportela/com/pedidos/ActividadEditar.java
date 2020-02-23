@@ -15,6 +15,12 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+/**
+ * Creada por Francisco Portela Henche el 10/02/2020.
+ * Esta clase presenta una Activity que nos permitirá editar un producto de la lista de yogures
+ * de Danone ó crear uno nuevo. También la usaremos para poder modificar tanto la dirección de
+ * correo electrónico como el asunto del correo de cualquiera de los dos proveedores.
+ */
 public class ActividadEditar extends AppCompatActivity implements View.OnClickListener{
     EditText etNombre;
     TextView tvTextoAyuda;
@@ -34,6 +40,10 @@ public class ActividadEditar extends AppCompatActivity implements View.OnClickLi
             "para mostrar los datos de forma correcta en la aplicación y también a la hora " +
             "de enviar el pedido al proveedor.";
 
+    /**
+     * Método que se ejecuta cuando creamos la Activity por primera vez.
+     * @param savedInstanceState un Bundle con datos guardados.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,6 +62,7 @@ public class ActividadEditar extends AppCompatActivity implements View.OnClickLi
         direccionCorreo = bundle.getString("correo");
         asunto = bundle.getString("asunto");
 
+        // comprobamos quien ha levantado la activity y actuamos en consecuencia.
         if(origen.equalsIgnoreCase("modificar")){
             setTitle("Modificar ó Borrar yogur");
             etNombre.setText(nombre);
@@ -84,6 +95,9 @@ public class ActividadEditar extends AppCompatActivity implements View.OnClickLi
         }
     }
 
+    /**
+     * En este método crearemos un nuevo producto Danone.
+     */
     private void anadirYogur(){
         String nombre = etNombre.getText().toString();
         if(nombre.length() == 0){
@@ -114,6 +128,9 @@ public class ActividadEditar extends AppCompatActivity implements View.OnClickLi
         finalizar();
     }
 
+    /**
+     * En este método modificamos un producto Danone.
+     */
     private void modificarYogur(){
         String nombre = etNombre.getText().toString();
         final List<Dato> lista = ActividadPrincipal.listaDatos;
@@ -152,6 +169,10 @@ public class ActividadEditar extends AppCompatActivity implements View.OnClickLi
         }
     }
 
+    /**
+     * En este método modificamos la dirección de correo electrónico de un proveedor.
+     * @param proveedor el nombre del proveedor.
+     */
     private void modificarCorreo(String proveedor){
         String nuevoCorreo = etNombre.getText().toString();
         if(proveedor.equalsIgnoreCase("feiraco")){
@@ -163,6 +184,10 @@ public class ActividadEditar extends AppCompatActivity implements View.OnClickLi
         finalizar();
     }
 
+    /**
+     * En este método modificamos el asunto del correo electrónico a un proveedor.
+     * @param proveedor el nombre del proveedor.
+     */
     private void modificarAsunto(String proveedor){
         String nuevoAsunto = etNombre.getText().toString();
         if(proveedor.equalsIgnoreCase("danone")){
@@ -174,13 +199,22 @@ public class ActividadEditar extends AppCompatActivity implements View.OnClickLi
         finalizar();
     }
 
+    /**
+     * Método para finalizar la Activity.
+     */
     private void finalizar(){
         finish();
     }
 
+    /**
+     * Método que se ejecuta cuando pulsamos en uno de los botones.
+     * @param v la vista donde se produce el evento de click.
+     */
     @Override
     public void onClick(View v) {
         Button boton = (Button)v;
+        // si se pulsa el botón aceptar comprobamos de donde procede el evento y lo dirigimos al
+        // método adecuado.
         if(boton.getText().toString().equalsIgnoreCase("aceptar")){
             if(origen.equalsIgnoreCase("modificar")){
                 modificarYogur();
@@ -195,6 +229,7 @@ public class ActividadEditar extends AppCompatActivity implements View.OnClickLi
                 modificarAsunto(proveedor);
             }
         }
+        // si se pulsa el botón cancelar salimos de la activity.
         else if(boton.getText().toString().equalsIgnoreCase("cancelar")){
             finalizar();
         }

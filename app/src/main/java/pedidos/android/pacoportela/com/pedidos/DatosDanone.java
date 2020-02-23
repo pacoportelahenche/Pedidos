@@ -8,7 +8,7 @@ import java.util.List;
  */
 public class DatosDanone {
     private List listaDatos = new ArrayList<Dato>();
-    private String[] nombresYogures = {" 14049-2-Natural X4","158041-2-Natural azuc. X4",
+    private String[] nombresYogures = {" 158042-2-Natural X4","158041-2-Natural azuc. X4",
             "158036-3-Natural X8"," 14051-2-Sabor fresa","158040-2-Sabor limón",
             " 14054-2-Sabor macedonia"," 14056-2-Vitalinea natural",
             " 14057-2-Vitalinea natural edul."," 14058-2-Vitalinea limón",

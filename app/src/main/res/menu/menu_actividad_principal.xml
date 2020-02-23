@@ -4,7 +4,9 @@
 
     <item
         android:id="@+id/enviar"
-        android:title="Enviar correo" />
+        android:icon="@drawable/outline_mail_black_24dp"
+        android:title="Enviar correo"
+        app:showAsAction="ifRoom" />
     <item
         android:id="@+id/anadir"
         android:title="Añadir yogur"

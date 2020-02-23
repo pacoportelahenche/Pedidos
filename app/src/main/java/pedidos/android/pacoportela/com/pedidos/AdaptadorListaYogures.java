@@ -12,14 +12,34 @@ import java.io.Serializable;
 import java.util.List;
 
 /**
- * Created by Francisco Portela Henche on 10/02/2020.
+ * Creada por Francisco Portela Henche el 10/02/2020.
+ * Esta clase es un adaptador para una clase ListView. Define como es cada fila de las lista
+ * que se visualiza en dicha ListView.
  */
 public class AdaptadorListaYogures extends ArrayAdapter<Dato> implements Serializable{
 
+    /**
+     * Constructor de la clase.
+     * @param context el contexto donde se visualiza la ListView. No puede ser null.
+     * @param objetos Los objetos a representar en el ListView. No puede ser null.
+     */
     public AdaptadorListaYogures(Context context, List<Dato> objetos){
         super(context, 0, objetos);
     }
 
+    /**
+     * Obtenga una vista que muestre los datos en la posición especificada en el conjunto de datos.
+     * Puede crear una Vista manualmente o inflarla desde un archivo de diseño XML. Cuando la Vista
+     * está inflada, la Vista principal (GridView, ListView ...) aplicará los parámetros de diseño
+     * predeterminados a menos que use LayoutInflater.inflate (int, android.view.ViewGroup, boolean)
+     * para especificar una vista raíz y para evitar la conexión al raíz.
+     *
+     * @param posicion La posición del elemento dentro del conjunto de datos del adaptador
+     * del elemento cuya vista deseamos.
+     * @param convertView puede ser null.
+     * @param parent nunca puede ser null.
+     * @return la vista que se mostrará en el ListView. No puede ser null.
+     */
     public View getView(int posicion, View convertView, ViewGroup parent){
         LayoutInflater inflater = (LayoutInflater)getContext()
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
