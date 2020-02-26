@@ -60,14 +60,14 @@ public class FragmentFeiraco extends Fragment {
         leche = (String)spinnerEntera.getSelectedItem();
         // si está seleccionado algo diferente de 'nada' lo añadimos a los datos a devolver.
         if(!leche.equalsIgnoreCase("nada")){
-            datos = datos + "\nEntera brick 1 litro: " + (String)spinnerDesna.getSelectedItem();
+            datos = datos + "\nEntera brick 1 litro: " + (String)spinnerEntera.getSelectedItem();
         }
         // recogemos los datos del Spinner de la leche semidesnatada.
         Spinner spinnerSemi = (Spinner)view.findViewById(R.id.spinnerSemi);
         leche = (String)spinnerSemi.getSelectedItem();
         // si está seleccionado algo diferente de 'nada' lo añadimos a los datos a devolver.
         if(!leche.equalsIgnoreCase("nada")){
-            datos = datos + "\nSemidesnatada brick 1 litro: " + (String)spinnerDesna.getSelectedItem();
+            datos = datos + "\nSemidesnatada brick 1 litro: " + (String)spinnerSemi.getSelectedItem();
         }
         // recogemos los datos del EditText 'unicla'
         EditText editTextUnicla = (EditText)view.findViewById(R.id.editTextUnicla);
@@ -104,6 +104,11 @@ public class FragmentFeiraco extends Fragment {
         // si contiene algo lo añadimos a los datos a devolver.
         if(editTextObservaciones.getText().length() > 0){
             datos = datos + "\n" + editTextObservaciones.getText();
+        }
+        // Comprobamos si no hay datos para enviar
+        if(datos.length() == 0){
+            // Añadimos un mensaje de aviso de que no hay pedido esta semana.
+            datos += "Esta semana no tenemos nada que pedir.";
         }
         // Añadimos un saludo de despedida.
         datos = datos + "\n\nMuchas gracias y un saludo.";

@@ -1,6 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        firmada {
+            storeFile file('C:\\Users\\Paco\\AlmacenClavesAndroid\\clave_android.jks')
+            storePassword 'Almacen'
+            keyAlias = 'clave'
+            keyPassword 'Claveandroid'
+        }
+    }
     compileSdkVersion 26
     buildToolsVersion '28.0.3'
     defaultConfig {

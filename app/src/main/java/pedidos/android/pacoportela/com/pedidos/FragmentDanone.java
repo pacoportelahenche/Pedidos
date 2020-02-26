@@ -93,6 +93,13 @@ public class FragmentDanone extends android.support.v4.app.Fragment{
         if(devolucion.length() > 13){
             datos += devolucion;
         }
+        // Comprobamos si no hay datos para enviar
+        if(datos.length() == 0){
+            // Añadimos un mensaje de aviso de que no hay pedido esta semana.
+            datos += "Esta semana no tenemos nada que pedir.";
+        }
+        // Añadimos un saludo de despedida.
+        datos += "\n\nMuchas gracias y un saludo.";
         // Devolvemos los datos.
         return datos;
     }
