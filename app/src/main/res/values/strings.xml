@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">Pedidos</string>
+    <string name="salir">SALIR</string>
+    <string name="aceptar">ACEPTAR</string>
+    <string name="cancelar">CANCELAR</string>
+    <string name="nombre_yogur">123456-6-Nombre nuevo yogur</string>
+    <string name="nombre">Nombre</string>
+    <string name="pedido">Pedido</string>
+    <string name="devolucion">Devolución</string>
+    <string name="desnatada">- Desnatada</string>
+    <string name="entera">- Entera</string>
+    <string name="semi">- Semi</string>
+    <string name="unicla">- Unicla</string>
+    <string name="sin_lactosa">- S/Lactosa</string>
+    <string name="cajas">¿Nº de cajas?</string>
+    <string name="queso">Queso lonchas</string>
+    <string name="nata_gde">Nata 1 lt.</string>
+    <string name="nata_pq">Nata 200 ml.</string>
+    <string name="observaciones">Observaciones</string>
+    <string name="urkel">Una imagen de Steve Urkel</string>
 </resources>

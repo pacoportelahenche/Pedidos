@@ -6,11 +6,13 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher_elco"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_launcher_elco"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         >
-        <activity android:name=".ActividadPrincipal">
+        <activity android:name=".ActividadPrincipal"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,7 +23,8 @@
         <activity
             android:name=".ActividadEditar"
             android:exported="false"
-            android:label="Modificar ó borrar yogur">
+            android:label="Modificar ó borrar yogur"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="c" />
 
@@ -31,7 +34,8 @@
         <activity
             android:name=".ActividadAyuda"
             android:exported="false"
-            android:label="Ayuda">
+            android:label="Ayuda"
+            android:screenOrientation="portrait">
         </activity>
 
     </application>

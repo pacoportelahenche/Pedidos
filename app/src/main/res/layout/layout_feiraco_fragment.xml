@@ -12,74 +12,74 @@
 
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textViewDesna"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="36dp"
-        android:text="- Desnatada"
+        android:text="@string/desnatada"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textViewEntera"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="28dp"
-        android:text="- Entera        "
+        android:text="@string/entera"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewDesna" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textViewSemi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="25dp"
-        android:text="- Semi           "
+        android:text="@string/semi"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewEntera" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textViewUnicla"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="25dp"
-        android:text="- Unicla         "
+        android:text="@string/unicla"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewSemi" />
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/textViewSinLactosa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="25dp"
-        android:text="- S/Lactosa  "
+        android:text="@string/sin_lactosa"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewUnicla" />
 
     <EditText
         android:id="@+id/editTextObservaciones"
+        android:importantForAutofill="no"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
         android:ems="10"
-        android:hint="Observaciones"
+        android:hint="@string/observaciones"
         android:inputType="textMultiLine"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/checkBoxNata_peque" />
@@ -88,88 +88,89 @@
         android:id="@+id/checkBoxQueso"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
-        android:text="Queso lonchas"
+        android:text="@string/queso"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
-        android:layout_marginStart="16dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewSinLactosa" />
 
     <CheckBox
         android:id="@+id/checkBoxNata_grande"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
-        android:text="Nata 1 lt."
+        android:text="@string/nata_gde"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBoxQueso"
-        android:layout_marginStart="16dp" />
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxQueso" />
 
     <CheckBox
         android:id="@+id/checkBoxNata_peque"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
-        android:text="Nata 20 cl."
+        android:text="@string/nata_pq"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBoxNata_grande"
-        android:layout_marginStart="16dp" />
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxNata_grande" />
 
     <Spinner
         android:id="@+id/spinnerDesna"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="40dp"
+        android:layout_marginEnd="16dp"
         android:entries="@array/array_cantidad_a_pedir"
-        app:layout_constraintLeft_toRightOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
         android:id="@+id/spinnerEntera"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:entries="@array/array_cantidad_a_pedir"
-        android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerDesna"
-        app:layout_constraintLeft_toRightOf="@+id/textView2"
-        android:layout_marginLeft="16dp" />
+        android:layout_marginEnd="16dp"
+        android:entries="@array/array_cantidad_a_pedir"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerDesna" />
 
     <Spinner
         android:id="@+id/spinnerSemi"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
         android:layout_marginTop="28dp"
+        android:layout_marginEnd="16dp"
         android:entries="@array/array_cantidad_a_pedir"
-        app:layout_constraintLeft_toRightOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinnerEntera" />
 
     <EditText
         android:id="@+id/editTextUnicla"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
         android:layout_marginTop="14dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@android:color/transparent"
         android:ems="10"
-        android:hint="cajas?"
+        android:hint="@string/cajas"
+        android:importantForAutofill="no"
         android:inputType="number"
-        app:layout_constraintLeft_toRightOf="@+id/textView4"
+        android:textAlignment="textEnd"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinnerSemi" />
 
     <EditText
         android:id="@+id/editTextLactosa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
         android:layout_marginTop="12dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@android:color/transparent"
         android:ems="10"
-        android:hint="cajas?"
+        android:hint="@string/cajas"
+        android:importantForAutofill="no"
         android:inputType="number"
-        app:layout_constraintLeft_toRightOf="@+id/textView5"
+        android:textAlignment="textEnd"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextUnicla" />
 </android.support.constraint.ConstraintLayout>
